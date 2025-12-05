@@ -1,0 +1,129 @@
+body{
+    background-color: rgb(49, 33, 33);
+}
+
+.titulo{
+    color: rgb(0, 120, 224);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+
+
+
+
+/*Botón de menú hamburguesa*/
+.hamburgesa{
+    display: flex;
+    align-items: center;
+    height: 25px;
+    width: 30px;
+    padding: 5px;
+    border: solid 3px white;
+    cursor: pointer;
+    background-color: rgb(59, 23, 126);
+}
+button{
+    border: none;
+    background: fixed;
+    transition: all 0.3s ease;
+
+}
+button:hover{
+transform: scale(1.1);
+}
+
+
+/*          Menú        */
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: rgb(59, 23, 126);
+    transform: translateX(100%); /* Oculto inicialmente */
+    transition: transform 1.2s ease; /* Transición más lenta */
+    z-index: 1000;
+}
+.menu.activo {
+    transform: translateX(0); /* Menú visible */
+}
+
+.cerrar-menu {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 26px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: all 0.3s ease;
+    position: absolute;
+}
+.cerrar-menu:hover {
+    background: white;
+    color: rgb(59, 23, 126);
+    transform: scale(1.1);
+}
+
+.logo{
+    display: flex;
+    padding-left: 21px;
+    height: 145px;
+}
+
+.overlay-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Inicialmente transparente */
+    z-index: 999;
+    opacity: 0; /* Oculto inicialmente */
+    pointer-events: none; /* Evita clics cuando es invisible */
+}
+.overlay-menu.activo {
+    opacity: 1; /* Oscurece la página */
+    background-color: rgba(0, 0, 0, 0.76); /* Oscurecimiento */
+    pointer-events: all; /* Activa clics */
+}
+.nav{
+    text-decoration: none;
+    color: white;
+}
+/*Animación de las opciones*/
+
+.menu ul a {
+    display: block; /* Ocupa todo el espacio del recuadro */
+    padding: 10px 20px; /* Espaciado interno */
+    margin: 10px 0; /* Espaciado entre opciones */
+    text-decoration: none;
+    color: white;
+    border: 2px solid transparent; /* Inicialmente sin borde visible */
+    border-radius: 5px; /* Esquinas redondeadas */
+    text-align: left; 
+    font-size: 16px; 
+    transition: all 0.3s ease; /* Animación */
+}
+.menu ul a:hover {
+    color: rgb(59, 23, 126);
+    background-color: white;
+    border: 2px solid white; /* Borde visible */
+    transform: scale(1.05); /* Ligero zoom al pasar el mouse */
+}
+
+
+
+
+
+
+
+
